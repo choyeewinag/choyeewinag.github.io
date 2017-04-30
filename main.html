@@ -1,29 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-<<<<<<< HEAD
-</head>
-<body>
-=======
-  <script src="./assets/js/aframe-v0.5.0.min.js"></script>
-</head>
-<body>
-      <a-scene>
-          <a-sky color="#83D0E8"></a-sky>
-          <!-- <a-box width="8" height="5" depth="6" position="-10 2 -5" rotation="0 0 45" src="#logo"> -->
-          <a-box width="8" height="5" depth="6" position="-10 2 -5" rotation="0 0 45" color="#6173F4">
-              <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
-          </a-box>
-          <a-camera position="0 1.8 0">
-              <!-- 1.8 meters -->
-              <a-cursor color="#1783c6"></a-cursor>
-          </a-camera>
-      </a-scene>
->>>>>>> 9cccbeb4fe9b5a431027b1ebb77898bdc5200bdb
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VoadMap</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="assets/js/app.js"></script>
+  </head>
+  <body>
 
-</body>
+    <a-scene>
+  <a-assets>
+    <a-sky color="#6EBAA7"></a-sky>
+    <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+  </a-assets>
+  <a-box follow1="target: #box1" width="1" height="1" depth="1" color="black" position="-3 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+  </a-box>
+  <a-box follow1="target: #box2" width="1" height="1" depth="1" color="black" position="0 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2" >
+      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+  </a-box>
+  <a-box follow1="target: #box3" width="1" height="1" depth="1" color="black" position="3 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
+      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+  </a-box>
+                <a-box id="box1" width="1" height="1" depth="1" color="black" position="-14.5 0 -17.5" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                    <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                    <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                    <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+                </a-box>
+
+                  <a-entity id="opacity" position="-15.5 0 -12.5" rotation="0 0 0"
+                                text="color: red; align: center; value: LESS and SASS; width: 5">
+                    </a-entity>
+
+                    <a-entity id="opacity" position="15.5 0 -12.5" rotation="0 0 0"
+                                  text="color: red; align: center; value: GIT; width: 5">
+                      </a-entity>
+
+                <a-box id="box1" width="1" height="1" depth="1" color="black" position="-12 0 -20" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                    <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                    <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                    <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+                </a-box>
+            <a-box id="box2" width="1" height="1" depth="1" color="black" position="-3 0 -25" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                 <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                 <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                 <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+             </a-box>
+             <a-entity id="opacity" position="-3 0 -23" rotation="0 0 0"
+                           text="color: red; align: center; value: Angular 2; width: 5">
+               </a-entity>
+
+               <a-entity id="opacity" position="0 0 -23" rotation="0 0 0"
+                             text="color: red; align: center; value: ReactJS; width: 5">
+                 </a-entity>
+
+                 <a-entity id="opacity" position="3 0 -23" rotation="0 0 0"
+                               text="color: red; align: center; value: JQuery; width: 5">
+                   </a-entity>
+
+
+             <a-box id="box2" width="1" height="1" depth="1" color="black" position="0 0 -25" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                 <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                 <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                 <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+             </a-box>
+             <a-box id="box2" width="1" height="1" depth="1" color="black" position="3 0 -25" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                 <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                 <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                 <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+             </a-box>
+             <!-- Section 3 -->
+                         <a-box id="box3" width="1" height="1" depth="1" color="black" position="15 0 -17" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                             <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                             <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                             <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+                         </a-box>
+                         <a-box id="box3" width="1" height="1" depth="1" color="black" position="13.5 0 -18.5" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                             <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                             <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                             <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+                         </a-box>
+                         <a-box id="box3" width="1" height="1" depth="1" color="black"position="12 0 -20" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                             <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                             <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                             <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+                         </a-box>
+
+                         <!-- Level 3 -->
+  <a-entity id="opacity" position="0 0 -3"
+                text="color: red; align: center; value: Javascript; width: 5">
+    </a-entity>
+
+    <a-entity id="opacity" position="-2.5 0 -3"
+                  text="color: red; align: center; value: CSS; width: 5">
+      </a-entity>
+
+      <a-entity id="opacity" position="2.5 0 -3"
+                    text="color: red; align: center; value: Tech Tools; width: 5">
+        </a-entity>
+  <a-entity id='cameraWrapper' position="0 -1 0">
+  <a-camera>
+
+    <a-cursor> </a-cursor>
+  </a-camera>
+  </a-entity>
+</a-scene>
+
+
+  </body>
 </html>
